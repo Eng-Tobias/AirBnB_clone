@@ -1,33 +1,25 @@
 #!/usr/bin/python3
-"""
-This module contains a simple implementation of a command interpreter.
-"""
+""" Console module """
 
-import os
-import sys
+import cmd
 
 
-def greet_user(name):
-"""
-Greet the user by their name.
- 
-Arguments:
-name (str): The name of the user.
-"""
-print(f"Hello, {name}!")
+class HBNBCommand(cmd.Cmd):
+    """ Command interpreter for AirBnB_clone """
+    prompt = '(hbnb) '
+
+    def do_quit(self, arg):
+        """Exit the console"""
+        return True
+
+    def do_EOF(self, arg):
+        """Handle EOF to exit the program"""
+        return True
+
+    def emptyline(self):
+        """Override default behavior to do nothing on empty input"""
+        pass
 
 
-def main():
-"""
-Main function to execute the program.
-"""
-if len(sys.argv) != 2:
-print("Usage: ./greet.py <name>")
-sys.exit(1)
-
-name = sys.argv[1]
-greet_user(name)
-
-
-if __name__ == "__main__":
-main()
+if __name__ == '__main__':
+    HBNBCommand().cmdloop()
