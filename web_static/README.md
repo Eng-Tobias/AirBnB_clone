@@ -20,4 +20,9 @@ This task involves creating an HTML page with a header and footer styled using s
 - `3-common.css`: Global styles for body.
 - `3-header.css`: Styles for the header, including a logo aligned to the left and vertically centered.
 - `3-footer.css`: Styles for the footer, with text centered vertically and horizontally, fixed at the bottom of the page.
+## Task 4: Search!
+This task extends the layout to include a filter section with a search button:
+- The `.container` centers the content and provides spacing below the header.
+- The `.filters` section contains the search button styled with `4-filters.css`.
+- The search button has a background color of #FF5A5F, text in white, and adjusts its opacity when hovered.
 
