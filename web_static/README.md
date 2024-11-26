@@ -31,4 +31,10 @@ This task introduces two new filters alongside the search button:
 - Each filter has a title (`h3`) and subtitle (`h4`).
 - Filters are styled with `5-filters.css` to align them properly and add borders.
 - The search button remains aligned and functional as in the previous tasks.
+## Task 6: Filters with Hover
+This task introduces dropdown menus for the "States" and "Amenities" filters:
+- Hovering over the filters displays a dropdown (`.popover`) with additional options.
+- States dropdown includes nested cities in a two-level list.
+- The `.popover` styling is applied to ensure the dropdown is visible only on hover.
+- Hover behavior is managed using the CSS `:hover` selector.
 
