@@ -10,3 +10,9 @@ This task involves creating an HTML page with a header and a footer styled using
 
 - Header: Red text, height 70px, full width.
 - Footer: Green text, height 60px, full width, centered horizontally and vertically, fixed at the bottom of the page.
+## Task 2: CSS Files
+This task involves creating an HTML page with a header and footer styled using three separate CSS files:
+- `2-common.css`: Global styles for the body.
+- `2-header.css`: Styles for the header.
+- `2-footer.css`: Styles for the footer.
+
