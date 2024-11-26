@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible AirBnB</title>
+    <link rel="stylesheet" href="styles/103-common.css">
+    <link rel="stylesheet" href="styles/103-header.css">
+    <link rel="stylesheet" href="styles/103-footer.css">
+    <link rel="stylesheet" href="styles/103-filters.css">
+    <link rel="stylesheet" href="styles/103-places.css">
+</head>
+<body>
+    <header role="banner">
+        <nav aria-label="Main navigation">
+            <div class="logo">LOGO</div>
+            <button aria-label="Open menu">Menu</button>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <aside class="filters" role="complementary">
+            <button class="search" aria-label="Search places">Search</button>
+        </aside>
+        <section class="places">
+            <h1>Places</h1>
+            <div class="places-list" role="list">
+                <article role="listitem" aria-labelledby="place1">
+                    <h2 id="place1">Place 1</h2>
+                    <div class="price_by_night" aria-label="Price per night">$100</div>
+                    <div class="information">
+                        <div class="max_guest" aria-label="Maximum guests">4 Guests</div>
+                        <div class="number_rooms" aria-label="Number of bedrooms">2 Bedrooms</div>
+                        <div class="number_bathrooms" aria-label="Number of bathrooms">1 Bathroom</div>
+                    </div>
+                </article>
+                <article role="listitem" aria-labelledby="place2">
+                    <h2 id="place2">Place 2</h2>
+                    <div class="price_by_night" aria-label="Price per night">$120</div>
+                    <div class="information">
+                        <div class="max_guest" aria-label="Maximum guests">6 Guests</div>
+                        <div class="number_rooms" aria-label="Number of bedrooms">3 Bedrooms</div>
+                        <div class="number_bathrooms" aria-label="Number of bathrooms">2 Bathrooms</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <p>Best School</p>
+    </footer>
+</b
