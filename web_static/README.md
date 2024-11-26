@@ -37,4 +37,17 @@ This task introduces dropdown menus for the "States" and "Amenities" filters:
 - States dropdown includes nested cities in a two-level list.
 - The `.popover` styling is applied to ensure the dropdown is visible only on hover.
 - Hover behavior is managed using the CSS `:hover` selector.
+## Task 7: Display Results
+This task introduces a "Places" section:
+- Displays a list of places as articles with titles.
+- Articles are styled with padding, margin, and a border to distinguish each place.
+- The `.places` section is styled to align articles horizontally or vertically depending on screen size.
+- This page combines filters with hover dropdowns and a results section for seamless UI.
+## Task 8: More Details
+This task enhances the "Places" section by adding:
+- Price by night with a distinct style positioned in the top-right corner.
+- Information section containing details about guests, bedrooms, and bathrooms.
+- User section displaying the owner's name in bold.
+- Description section for additional text.
+- The updated layout improves usability by presenting more details in a structured way.
 
