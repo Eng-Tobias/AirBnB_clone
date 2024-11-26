@@ -50,4 +50,9 @@ This task enhances the "Places" section by adding:
 - User section displaying the owner's name in bold.
 - Description section for additional text.
 - The updated layout improves usability by presenting more details in a structured way.
+## Task 9: Full Details
+This task adds more details to the "Places" section, including:
+- List of amenities with a descriptive header and no bullet points.
+- List of reviews with user, date, and review content.
+- Updated layout provides a complete view of a place, enhancing usability and readability.
 
