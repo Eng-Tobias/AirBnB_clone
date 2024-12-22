@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-"""Unittest for State class"""
+"""Test suite for the State class."""
 
 import unittest
 from models.state import State
 
 
 class TestState(unittest.TestCase):
-    """Test cases for the State class"""
+    """Tests for the State class."""
 
     def test_attributes(self):
+        """Test that State has the correct attributes."""
         state = State()
         self.assertTrue(hasattr(state, "name"))
-
-
-if __name__ == "__main__":
-    unittest.main()
+        self.assertEqual(state.name, "")

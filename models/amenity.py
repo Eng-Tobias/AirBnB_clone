@@ -1,8 +1,8 @@
-"""
-This module defines the Amenity class.
-"""
+#!/usr/bin/python3
+"""Defines the Amenity class."""
+from models.base_model import BaseModel
 
 
-class Amenity:
-    """Represents an amenity."""
-    pass
+class Amenity(BaseModel):
+    """Represents an Amenity."""
+    name = ""  # Ensure this attribute is present
