@@ -1,25 +1,21 @@
-#!/usr/bin/python3
-""" Console module """
-
 import cmd
 
-
 class HBNBCommand(cmd.Cmd):
-    """ Command interpreter for AirBnB_clone """
-    prompt = '(hbnb) '
+    """Command interpreter for the HBNB project."""
+    
+    prompt = '(hbnb) '  # Custom prompt
 
     def do_quit(self, arg):
-        """Exit the console"""
+        """Quit command to exit the program."""
         return True
 
     def do_EOF(self, arg):
-        """Handle EOF to exit the program"""
+        """EOF signal to exit the program."""
         return True
 
     def emptyline(self):
-        """Override default behavior to do nothing on empty input"""
+        """Override emptyline to prevent execution on empty line."""
         pass
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
