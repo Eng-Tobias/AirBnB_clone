@@ -1,20 +1,23 @@
 import cmd
 
 class HBNBCommand(cmd.Cmd):
-    """Command interpreter for the HBNB project."""
-    
-    prompt = '(hbnb) '  # Custom prompt
+    prompt = '(hbnb)'
 
     def do_quit(self, arg):
-        """Quit command to exit the program."""
+        """Quit command to exit the program"""
         return True
 
     def do_EOF(self, arg):
-        """EOF signal to exit the program."""
+        """Exit on EOF (Ctrl+D)"""
+        print()
         return True
 
     def emptyline(self):
-        """Override emptyline to prevent execution on empty line."""
+        """Do nothing on empty line"""
+        pass
+
+    def preloop(self):
+        """Override preloop to prevent any additional output before the prompt"""
         pass
 
 if __name__ == '__main__':
