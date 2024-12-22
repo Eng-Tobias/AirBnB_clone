@@ -4,6 +4,7 @@
 import unittest
 from models.user import User
 
+
 class TestUser(unittest.TestCase):
     """Test cases for the User class"""
 
@@ -11,6 +12,7 @@ class TestUser(unittest.TestCase):
         user = User()
         self.assertTrue(hasattr(user, "email"))
         self.assertTrue(hasattr(user, "password"))
+
 
 if __name__ == "__main__":
     unittest.main()

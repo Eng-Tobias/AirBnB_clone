@@ -4,6 +4,7 @@
 import unittest
 from models.city import City
 
+
 class TestCity(unittest.TestCase):
     """Test cases for the City class"""
 
@@ -11,6 +12,7 @@ class TestCity(unittest.TestCase):
         city = City()
         self.assertTrue(hasattr(city, "state_id"))
         self.assertTrue(hasattr(city, "name"))
+
 
 if __name__ == "__main__":
     unittest.main()

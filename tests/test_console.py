@@ -2,6 +2,8 @@
 """Unittest for console.py"""
 
 import unittest
+
+
 from console import HBNBCommand
 
 class TestConsole(unittest.TestCase):
@@ -9,6 +11,7 @@ class TestConsole(unittest.TestCase):
 
     def test_help_command(self):
         self.assertTrue(hasattr(HBNBCommand, "do_help"))
+
 
 if __name__ == "__main__":
     unittest.main()
