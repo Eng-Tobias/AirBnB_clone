@@ -3,8 +3,8 @@
 
 import unittest
 
-
 from console import HBNBCommand
+
 
 class TestConsole(unittest.TestCase):
     """Test cases for the HBNB console"""
