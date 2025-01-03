@@ -4,37 +4,52 @@ import re
 from models import storage
 from models.state import State
 from models.place import Place
-from models.base_model import BaseModel
+# Add other imports as necessary
 
 class HBNBCommand:
+    # Other methods...
+
     def do_create(self, arg):
-        """Creates a new instance of a given class and sets attributes with given params"""
-        args = arg.split()
-        if not args:
+        """Create a new object with provided parameters and print its ID."""
+        if not arg:
             print("** class name missing **")
             return
-        class_name = args[0]
-        if class_name not in ["State", "Place", "User", "Amenity", "City", "Review"]:
+
+        # Extract class name and parameters from the argument
+        arg_list = arg.split()
+        class_name = arg_list[0]
+        parameters = {}
+
+        # Ensure class name is valid
+        if class_name not in globals() or class_name not in storage.classes():
             print("** class doesn't exist **")
             return
-        cls = globals().get(class_name)
 
-        # Parse parameters
-        params = {}
-        for param in args[1:]:
-            try:
-                key, value = param.split('=')
-                value = value.strip('"').replace("_", " ")
-                if value.replace(".", "", 1).isdigit():  # Check if it's an integer or float
+        # Process parameters
+        for param in arg_list[1:]:
+            match = re.match(r'([a-zA-Z0-9_]+)=\"([^\"]+)\"', param)
+            if match:
+                key, value = match.groups()
+                parameters[key] = value
+            else:
+                match = re.match(r'([a-zA-Z0-9_]+)=([0-9]+\.[0-9]+|[0-9]+)', param)
+                if match:
+                    key, value = match.groups()
                     if '.' in value:
-                        value = float(value)
+                        parameters[key] = float(value)
                     else:
-                        value = int(value)
-                params[key] = value
-            except ValueError:
-                pass
+                        parameters[key] = int(value)
+                else:
+                    print("** invalid parameter format **")
+                    return
 
-        # Create object
-        new_instance = cls(**params)
-        new_instance.save()
-        print(f"({new_instance.__class__.__name__}) {new_instance.id}")
+        # Check if parameters are provided correctly for the class
+        try:
+            cls = globals()[class_name]
+            obj = cls(**parameters)  # Create object with parsed parameters
+            obj.save()  # Save to storage
+
+            print(obj.id)  # Print the object ID
+        except TypeError as e:
+            print(f"** error: {str(e)} **")
+            return

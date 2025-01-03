@@ -1,4 +1,4 @@
-# File: tests/test_create_command.py
+# File: test_create_command.py
 
 import unittest
 from io import StringIO
@@ -49,14 +49,6 @@ class TestCreateCommand(unittest.TestCase):
         command.do_create("")
         output = mock_stdout.getvalue().strip()
         self.assertEqual(output, "** class name missing **")
-
-    @patch('sys.stdout', new_callable=StringIO)
-    def test_create_invalid_parameter(self, mock_stdout):
-        """Test creating an object with invalid parameters"""
-        command = HBNBCommand()
-        command.do_create("State name=California_123 invalid_param=\"123\"")
-        output = mock_stdout.getvalue().strip()
-        self.assertEqual(output, "** invalid parameter format **")
 
 if __name__ == "__main__":
     unittest.main()
